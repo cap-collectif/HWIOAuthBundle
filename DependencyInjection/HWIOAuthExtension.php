@@ -122,6 +122,9 @@ final class HWIOAuthExtension extends Extension
         $type = $options['type'];
         unset($options['type']);
 
+        $optionsModifier = $options['options_modifier'];
+        unset($options['options_modifier']);
+
         // handle external resource owners with given class
         if (isset($options['class'])) {
             if (!is_subclass_of($options['class'], ResourceOwnerInterface::class)) {
@@ -138,7 +141,7 @@ final class HWIOAuthExtension extends Extension
 
         $definition->replaceArgument(2, $options);
         $definition->replaceArgument(3, $name);
-        $definition->replaceArgument(4, new Reference($container->getParameter('hwi_oauth.options_modifier')));
+        $definition->replaceArgument(4, new Reference($optionsModifier));
         $definition->setPublic(true);
 
         $container->setDefinition('hwi_oauth.resource_owner.'.$name, $definition);
