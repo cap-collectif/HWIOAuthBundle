@@ -67,7 +67,7 @@
         <parameter key="hwi_oauth.resource_owner.odnoklassniki.class">HWI\Bundle\OAuthBundle\OAuth\ResourceOwner\OdnoklassnikiResourceOwner</parameter>
         <parameter key="hwi_oauth.resource_owner.37signals.class">HWI\Bundle\OAuthBundle\OAuth\ResourceOwner\ThirtySevenSignalsResourceOwner</parameter>
         <parameter key="hwi_oauth.resource_owner.itembase.class">HWI\Bundle\OAuthBundle\OAuth\ResourceOwner\ItembaseResourceOwner</parameter>
-        <parameter key="hwi_oauth.config.options_modifier.class">HWI\Bundle\OAuthBundle\OAuth\OptionsModifier\OAuthOptionsModifier</parameter>
+        <parameter key="hwi_oauth.config.options_modifier.class">HWI\Bundle\OAuthBundle\OAuth\OptionsModifier\OauthOptionsModifier</parameter>
     </parameters>
 
     <services>
