@@ -75,9 +75,6 @@ final class HWIOAuthExtension extends Extension
         // set grant rule
         $container->setParameter('hwi_oauth.grant_rule', $config['grant_rule']);
 
-        // set options modifier service
-        $container->setParameter('hwi_oauth.options_modifier', $config['options_modifier']);
-
         // setup services for all configured resource owners
         $resourceOwners = [];
         foreach ($config['resource_owners'] as $name => $options) {
