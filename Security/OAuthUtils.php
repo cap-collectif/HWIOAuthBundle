@@ -255,7 +255,7 @@ class OAuthUtils
      *
      * @throws \RuntimeException
      */
-    protected function getResourceOwner($name)
+    public function getResourceOwner($name)
     {
         foreach ($this->ownerMaps as $ownerMap) {
             $resourceOwner = $ownerMap->getResourceOwnerByName($name);
@@ -272,7 +272,7 @@ class OAuthUtils
      *
      * @return string|null
      */
-    protected function getResourceOwnerCheckPath($name)
+    public function getResourceOwnerCheckPath($name)
     {
         foreach ($this->ownerMaps as $ownerMap) {
             if ($potentialResourceOwnerCheckPath = $ownerMap->getResourceOwnerCheckPath($name)) {
